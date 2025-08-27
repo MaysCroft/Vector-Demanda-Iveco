@@ -14,7 +14,7 @@
         <Style TargetType="TextBox">
             <Setter Property="Margin" Value="5" />
             <Setter Property="Padding" Value="8" />
-            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontSize" Value="20" />
             <Setter Property="Background" Value="#FFFFFF" />
             <Setter Property="BorderBrush" Value="#D1D5DB" />
             <Setter Property="BorderThickness" Value="1" />
@@ -22,9 +22,10 @@
         </Style>
 
         <Style TargetType="Label">
-            <Setter Property="Margin" Value="5,10,5,5" />
+            <Setter Property="Margin" Value="5" />
             <Setter Property="FontWeight" Value="Medium" />
             <Setter Property="Foreground" Value="#374151" />
+            <Setter Property="FontSize" Value="20" />
         </Style>
 
         <Style TargetType="Button">
@@ -41,7 +42,7 @@
         <Style TargetType="ComboBox">
             <Setter Property="Margin" Value="5" />
             <Setter Property="Padding" Value="8" />
-            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontSize" Value="20" />
             <Setter Property="Background" Value="#FFFFFF" />
         </Style>
     </Window.Resources>
@@ -57,7 +58,7 @@
         <Border Grid.Row="0"
                 Background="ForestGreen"
                 CornerRadius="8"
-                Margin="0,0,0,20">
+                Margin="0,0,0,5">
 
             <StackPanel Orientation="Horizontal"
                         Margin="20"
@@ -69,7 +70,7 @@
                        Margin="0,0,15,0" />
 
                 <TextBlock Text="ANÁLISE DE COMBUSTÍVEL"
-                           FontSize="24"
+                           FontSize="30"
                            FontWeight="Bold"
                            Foreground="White"
                            VerticalAlignment="Center" />
@@ -80,7 +81,7 @@
         <Border Grid.Row="1"
                 Background="White"
                 CornerRadius="8"
-                Padding="20">
+                Padding="15">
 
             <Grid>
                 <Grid.RowDefinitions>
@@ -88,7 +89,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -135,7 +136,6 @@
                         Grid.ColumnSpan="2"
                         Content="ANALISAR COMBUSTÍVEL"
                         Click="BtnAnalisar_Click"
-                        Margin="10"
                         Background="#059669"
                         FontSize="16" />
 
@@ -146,26 +146,27 @@
                        HorizontalAlignment="Center"
                        Content="RESULTADO DA ANÁLISE:" />
 
-                <TextBox Grid.Row="5"
-                         Grid.Column="0"
-                         Grid.ColumnSpan="2"
-                         x:Name="txtResultado"
-                         TextWrapping="Wrap"
-                         VerticalScrollBarVisibility="Auto"
-                         IsReadOnly="True"
-                         FontSize="14"
-                         Background="#F9FAFB"
-                         BorderBrush="#E5E7EB" />
+                <ScrollViewer Grid.Row="5"
+                              Grid.Column="0"
+                              Grid.ColumnSpan="2">
+
+                    <TextBox x:Name="txtResultado"
+                             TextWrapping="Wrap"
+                             IsReadOnly="True"
+                             FontSize="20"
+                             VerticalScrollBarVisibility="Auto"
+                             Background="#F9FAFB"
+                             BorderBrush="#E5E7EB" />
+                </ScrollViewer>
             </Grid>
         </Border>
 
         <!-- Rodapé -->
         <Border Grid.Row="2"
                 Background="#F3F4F6"
-                CornerRadius="8"
-                Margin="0,20,0,0">
+                CornerRadius="8">
 
-            <TextBlock Text="Sistema de Análise de Combustível © 2025"
+            <TextBlock Text="Projeto Zero-E-Mission © 2025"
                        HorizontalAlignment="Center"
                        Margin="5"
                        Foreground="#6B7280" />
