@@ -33,7 +33,7 @@
             <Setter Property="Padding" Value="12,8" />
             <Setter Property="FontSize" Value="14" />
             <Setter Property="FontWeight" Value="Medium" />
-            <Setter Property="Background" Value="#2563EB" />
+            <Setter Property="Background" Value="#059669" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="BorderThickness" Value="0" />
             <Setter Property="Cursor" Value="Hand" />
@@ -47,7 +47,7 @@
         </Style>
     </Window.Resources>
 
-    <Grid Margin="20">
+    <Grid Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -81,7 +81,7 @@
         <Border Grid.Row="1"
                 Background="White"
                 CornerRadius="8"
-                Padding="15">
+                Padding="10">
 
             <Grid>
                 <Grid.RowDefinitions>
@@ -136,7 +136,6 @@
                         Grid.ColumnSpan="2"
                         Content="ANALISAR COMBUSTÍVEL"
                         Click="BtnAnalisar_Click"
-                        Background="#059669"
                         FontSize="16" />
 
                 <!-- Resultado -->
@@ -148,15 +147,17 @@
 
                 <ScrollViewer Grid.Row="5"
                               Grid.Column="0"
-                              Grid.ColumnSpan="2">
+                              Grid.ColumnSpan="2"
+                              MaxHeight="300">
 
                     <TextBox x:Name="txtResultado"
                              TextWrapping="Wrap"
                              IsReadOnly="True"
                              FontSize="20"
                              VerticalScrollBarVisibility="Auto"
-                             Background="#F9FAFB"
-                             BorderBrush="#E5E7EB" />
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+                             Text="AGUARDANDO DADOS..." />
                 </ScrollViewer>
             </Grid>
         </Border>
@@ -164,11 +165,12 @@
         <!-- Rodapé -->
         <Border Grid.Row="2"
                 Background="#F3F4F6"
-                CornerRadius="8">
+                CornerRadius="8"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
 
             <TextBlock Text="Projeto Zero-E-Mission © 2025"
-                       HorizontalAlignment="Center"
-                       Margin="5"
+                       Margin="10"
                        Foreground="#6B7280" />
         </Border>
     </Grid>
