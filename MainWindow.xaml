@@ -108,47 +108,27 @@
                          Text="830"
                          PreviewTextInput="NumberValidationTextBox" />
 
-                <!-- Presença de Água -->
-                <Label Grid.Row="1"
-                       Grid.Column="0"
-                       Content="Presença de Água:" />
-
-                <ComboBox Grid.Row="1" Grid.Column="1"
-                          x:Name="cmbAgua"
-                          SelectedIndex="0">
-                    <ComboBoxItem Content="Não" />
-                    <ComboBoxItem Content="Sim" />
-                </ComboBox>
-
                 <!-- Percentual de Biodiesel -->
-                <Label Grid.Row="2"
+                <Label Grid.Row="1"
                        Grid.Column="0"
                        Content="Percentual de Biodiesel (%):" />
 
-                <TextBox Grid.Row="2" Grid.Column="1"
+                <TextBox Grid.Row="1" Grid.Column="1"
                          x:Name="txtBiodiesel"
                          Text="10"
                          PreviewTextInput="NumberValidationTextBox" />
 
-                <!-- Botão Analisar -->
-                <Button Grid.Row="3"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="2"
-                        Content="ANALISAR COMBUSTÍVEL"
-                        Click="BtnAnalisar_Click"
-                        FontSize="16" />
-
                 <!-- Resultado -->
-                <Label Grid.Row="4"
+                <Label Grid.Row="2"
                        Grid.Column="0"
                        Grid.ColumnSpan="2"
                        HorizontalAlignment="Center"
                        Content="RESULTADO DA ANÁLISE:" />
 
-                <ScrollViewer Grid.Row="5"
+                <ScrollViewer Grid.Row="3"
                               Grid.Column="0"
                               Grid.ColumnSpan="2"
-                              MaxHeight="300">
+                              MaxHeight="500">
 
                     <TextBox x:Name="txtResultado"
                              TextWrapping="Wrap"
@@ -157,7 +137,8 @@
                              VerticalScrollBarVisibility="Auto"
                              Background="Transparent"
                              BorderBrush="Transparent"
-                             Text="AGUARDANDO DADOS..." />
+                             Text="AGUARDANDO DADOS..." 
+                             Margin="5"/>
                 </ScrollViewer>
             </Grid>
         </Border>
